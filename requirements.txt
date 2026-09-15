@@ -1,0 +1,4 @@
+openai>=1.30
+langgraph>=0.1
+requests>=2.31
+pytest>=7.4
