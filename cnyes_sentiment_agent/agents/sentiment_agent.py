@@ -4,10 +4,10 @@ Sentiment Agent (LangGraph Node)
 負責：讀取 state["raw_news"]，用 GPT-4o 逐則新聞打情緒分數，
       寫回 state["sentiment_results"]。
 
-這是你在 CMONEY 已經做過的部分（Gemini API 版本），這裡改用 GPT-4o，
+在 CMONEY 已經做過的部分（Gemini API 版本），這裡改用 GPT-4o，
 架構邏輯完全一樣：few-shot prompt + schema-constrained output（強制 JSON）。
 
-TODO（這是 Day 2 你要親手填的部分，我先把架構和一個範例 prompt 搭好）：
+TODO（先把架構和一個範例 prompt 搭好）：
     [ ] 確認 few-shot 範例是否符合你想要的判讀風格（機構語氣 vs 散戶語氣）
     [ ] 決定要不要批次呼叫（一次丟多則新聞 vs 逐則呼叫，影響成本和速度）
     [ ] 補上 OPENAI_API_KEY 環境變數
